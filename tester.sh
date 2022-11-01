@@ -44,24 +44,23 @@ echo "Cloned"
 
 cd $reponame
 
-# git remote add origin1 $repolink
-# git remote remove origin
-# git remote add origin "$workingDir/$username/$username.bundle"
-# git remote -v
-
 mkdir "spec"
 cp ../../app_spec.rb spec/spec_app.rb
 
 rspec --init
 
-# sleep 1
+if [ -f Gemfile.lock ]; then
+    rm Gemfile.lock
+fi
 
-# echo "Installing ruby gems"
-# bundle install
+if [ -f .rspec ]; then
+    rm .rspec spec/spec_helper.rb
+fi
 
-# sleep 1
+if [ -f spec/spec_helper.rb ]; then
+    rm spec/spec_helper.rb
+fi
 
-rm Gemfile.lock .rspec spec/spec_helper.rb
 sleep 1
 rspec --init
 sleep 1
