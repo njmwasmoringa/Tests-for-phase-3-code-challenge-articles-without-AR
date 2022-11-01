@@ -74,4 +74,4 @@ rspec spec/spec_app.rb
 
 #cleaning up
 cd $workingDir
-# rm -r -f $username
+rm -r -f $username
