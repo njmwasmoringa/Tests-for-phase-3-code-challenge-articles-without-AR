@@ -4,6 +4,7 @@ app_spec.rb contains all the tests for testing the code for Phase 3 code challen
 ## How to run the test
 - `git clone` this repository
 - then run `bash tester.sh <repo-link>` replace "repo-link" with a repository link to the code challenge
+
 Example: `bash tester.sh https://github.com/njmwasmoringa/articles-without-AR.git`
 
 this will
